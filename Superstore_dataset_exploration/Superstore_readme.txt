@@ -5,3 +5,4 @@ as well as the cities and states that made the most and least amount.
 A tableau workbook file is provided to showcase a visualization of the profit made by region and state as well as
 by sub-category. The dashboard has an interactive map which can drill down to individual states to provide their total profit.
 Drilling down will also filter the bar chart to show that state's profit per sub-category. 
+An image preview is provided of this dashboard as well. 
