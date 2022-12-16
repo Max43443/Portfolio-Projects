@@ -2,7 +2,7 @@ This folder contains a CSV, SQL code file and visuals for a dataset that consist
 various types of foods. It provides the calorie count, protein, fat and carbs for each food. It also lists 
 the diet type, food category each food belongs to and whether it comes from an animal or not.
 My exploration of this data consisted of discovering which foods provided the most protein for the various categories,
-diet types, as well as highest protein count with below average calorie count. 
+diet types, as well as highest protein count with below average carb/fat count. 
 
 Exercise is a big part of my life and I found it useful to discover from this data which foods could be incorporated 
 into my meals that would provide me with more protein for muscle growth based on various limiting factors such as diet or food type. 
