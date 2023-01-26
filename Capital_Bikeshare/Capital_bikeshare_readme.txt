@@ -12,3 +12,9 @@ I started here with finding the average ride duration for each quarter and conve
 I also compared the percentage change in ride count for members and casual users quarter to quarter. These results were 
 formatted to two decimal places and added a % for easier reading. 
 
+Also in this folder are 3 JPG files for previewing the Tableau dashboard I created for this dataset. The dashboard displays
+two bar charts, containing the top and bottom 10 stations. A line chart displaying change in total users month-to-month by casual
+and member users. As well as a line chart displaying change in average ride duration month-to-month by casual and member users.
+The second page contains the follow metrics: user count broken down by member and casual users, total bike count and total station count. 
+There is also a map containing every station location. This page can be filtered for the entire year or individual months.
+Lastly, the third page is a heat map showing where the most popular stations are and can also be filtered on the entire year or individual months.
