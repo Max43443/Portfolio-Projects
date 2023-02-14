@@ -1,0 +1,2563 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.22.1117.1841                               -->
+<workbook original-version='18.1' source-build='2022.4.0 (20224.22.1117.1841)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='title button' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='1.0'>
+        <calculation class='tableau' formula='1.0' />
+      </column>
+    </datasource>
+    <datasource caption='doordash_historical_data_cleaned' inline='true' name='federated.070e5nm05hpul21gps2dp0hzqrbx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='doordash_historical_data_cleaned' name='textscan.10gjuvn1fhb3l21d6ien91260xso'>
+            <connection class='textscan' directory='C:/Users/Public' filename='doordash_historical_data_cleaned.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.10gjuvn1fhb3l21d6ien91260xso' name='doordash_historical_data_cleaned.csv' table='[doordash_historical_data_cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='market_id' ordinal='0' />
+            <column datatype='datetime' name='created_at' ordinal='1' />
+            <column datatype='datetime' name='actual_delivery_time' ordinal='2' />
+            <column datatype='integer' name='store_id' ordinal='3' />
+            <column datatype='string' name='store_primary_category' ordinal='4' />
+            <column datatype='integer' name='order_protocol' ordinal='5' />
+            <column datatype='integer' name='total_items' ordinal='6' />
+            <column datatype='real' name='subtotal' ordinal='7' />
+            <column datatype='integer' name='num_distinct_items' ordinal='8' />
+            <column datatype='real' name='min_item_price' ordinal='9' />
+            <column datatype='real' name='max_item_price' ordinal='10' />
+            <column datatype='integer' name='total_onshift_dashers' ordinal='11' />
+            <column datatype='integer' name='total_busy_dashers' ordinal='12' />
+            <column datatype='integer' name='total_outstanding_orders' ordinal='13' />
+            <column datatype='integer' name='estimated_order_place_duration' ordinal='14' />
+            <column datatype='integer' name='estimated_store_to_consumer_driving_duration' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.10gjuvn1fhb3l21d6ien91260xso' name='doordash_historical_data_cleaned.csv' table='[doordash_historical_data_cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='market_id' ordinal='0' />
+            <column datatype='datetime' name='created_at' ordinal='1' />
+            <column datatype='datetime' name='actual_delivery_time' ordinal='2' />
+            <column datatype='integer' name='store_id' ordinal='3' />
+            <column datatype='string' name='store_primary_category' ordinal='4' />
+            <column datatype='integer' name='order_protocol' ordinal='5' />
+            <column datatype='integer' name='total_items' ordinal='6' />
+            <column datatype='real' name='subtotal' ordinal='7' />
+            <column datatype='integer' name='num_distinct_items' ordinal='8' />
+            <column datatype='real' name='min_item_price' ordinal='9' />
+            <column datatype='real' name='max_item_price' ordinal='10' />
+            <column datatype='integer' name='total_onshift_dashers' ordinal='11' />
+            <column datatype='integer' name='total_busy_dashers' ordinal='12' />
+            <column datatype='integer' name='total_outstanding_orders' ordinal='13' />
+            <column datatype='integer' name='estimated_order_place_duration' ordinal='14' />
+            <column datatype='integer' name='estimated_store_to_consumer_driving_duration' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[market_id]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>market_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[created_at]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>actual_delivery_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[actual_delivery_time]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>actual_delivery_time</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[store_id]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>store_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_primary_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[store_primary_category]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>store_primary_category</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_protocol</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_protocol]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>order_protocol</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_items</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_items]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>total_items</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subtotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[subtotal]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>subtotal</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_distinct_items</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_distinct_items]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>num_distinct_items</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>min_item_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[min_item_price]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>min_item_price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_item_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_item_price]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>max_item_price</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_onshift_dashers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_onshift_dashers]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>total_onshift_dashers</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_busy_dashers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_busy_dashers]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>total_busy_dashers</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_outstanding_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_outstanding_orders]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>total_outstanding_orders</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estimated_order_place_duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[estimated_order_place_duration]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>estimated_order_place_duration</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estimated_store_to_consumer_driving_duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[estimated_store_to_consumer_driving_duration]</local-name>
+            <parent-name>[doordash_historical_data_cleaned.csv]</parent-name>
+            <remote-alias>estimated_store_to_consumer_driving_duration</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Time Created At' datatype='string' name='[Calculation_568298041241362433]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='RIGHT(STR([created_at]), 9)' />
+      </column>
+      <column caption='Time Delivered At' datatype='string' name='[Calculation_568298041241862146]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='RIGHT(STR([actual_delivery_time]), 9)' />
+      </column>
+      <column caption='Order Count Rank' datatype='integer' name='[Calculation_568298041289408517]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(COUNTD([created_at]), &apos;desc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='Sum' caption='Hour Created' datatype='integer' name='[Calculation_579838513608679424]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEPART(&apos;hour&apos;, [created_at])' />
+      </column>
+      <column caption='Period of Day' datatype='string' datatype-customized='true' name='[Calculation_579838513609449473]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_579838513608679424] &gt;= 3 AND [Calculation_579838513608679424] &lt; 6 THEN &apos;Early Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 6 AND [Calculation_579838513608679424] &lt; 12 THEN &apos;Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 12 AND [Calculation_579838513608679424] &lt; 17 THEN &apos;Afternoon&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 17 AND [Calculation_579838513608679424] &lt; 21 THEN &apos;Evening&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 21 AND [Calculation_579838513608679424] &lt;= 24 THEN &apos;Night&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 0 AND [Calculation_579838513608679424] &lt; 3 THEN &apos; Late Night&apos;&#13;&#10;END' />
+        <aliases>
+          <alias key='&quot; Late Night&quot;' value=' Late Night (12am - 3am)' />
+          <alias key='&quot;Afternoon&quot;' value='Afternoon (12pm - 5pm)' />
+          <alias key='&quot;Early Morning&quot;' value='Early Morning (3am - 6am)' />
+          <alias key='&quot;Evening&quot;' value='Evening (5pm- 9pm)' />
+          <alias key='&quot;Morning&quot;' value='Morning (6am - 12pm)' />
+          <alias key='&quot;Night&quot;' value='Night (9pm - 12am)' />
+        </aliases>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='doordash_historical_data_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072]' role='measure' type='quantitative' />
+      <column caption='Actual Delivery Time' datatype='datetime' name='[actual_delivery_time]' role='dimension' type='ordinal' />
+      <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+      <column caption='Estimated Order Place Duration' datatype='integer' name='[estimated_order_place_duration]' role='measure' type='quantitative' />
+      <column caption='Estimated Store To Consumer Driving Duration' datatype='integer' name='[estimated_store_to_consumer_driving_duration]' role='measure' type='quantitative' />
+      <column caption='Market Id' datatype='integer' name='[market_id]' role='dimension' type='ordinal' />
+      <column caption='Max Item Price' datatype='real' name='[max_item_price]' role='measure' type='quantitative' />
+      <column caption='Min Item Price' datatype='real' name='[min_item_price]' role='measure' type='quantitative' />
+      <column caption='Num Distinct Items' datatype='integer' name='[num_distinct_items]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Order Protocol' datatype='integer' name='[order_protocol]' role='dimension' type='ordinal' />
+      <column caption='Store Id' datatype='integer' name='[store_id]' role='dimension' type='ordinal' />
+      <column caption='Store Primary Category' datatype='string' name='[store_primary_category]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;american&quot;' value='American' />
+          <alias key='&quot;burger&quot;' value='Burger' />
+          <alias key='&quot;chinese&quot;' value='Chinese' />
+          <alias key='&quot;dessert&quot;' value='Dessert' />
+          <alias key='&quot;fast&quot;' value='Fast' />
+          <alias key='&quot;indian&quot;' value='Indian' />
+          <alias key='&quot;japanese&quot;' value='Japanese' />
+          <alias key='&quot;mexican&quot;' value='Mexican' />
+          <alias key='&quot;pizza&quot;' value='Pizza' />
+          <alias key='&quot;sandwich&quot;' value='Sandwich' />
+        </aliases>
+      </column>
+      <column caption='Subtotal' datatype='real' name='[subtotal]' role='measure' type='quantitative' />
+      <column caption='Total Busy Dashers' datatype='integer' name='[total_busy_dashers]' role='measure' type='quantitative' />
+      <column caption='Total Items' datatype='integer' name='[total_items]' role='measure' type='quantitative' />
+      <column caption='Total Onshift Dashers' datatype='integer' name='[total_onshift_dashers]' role='measure' type='quantitative' />
+      <column caption='Total Outstanding Orders' datatype='integer' name='[total_outstanding_orders]' role='measure' type='quantitative' />
+      <column-instance column='[total_busy_dashers]' derivation='Avg' name='[avg:total_busy_dashers:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[total_busy_dashers]' derivation='Avg' name='[avg:total_busy_dashers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_onshift_dashers]' derivation='Avg' name='[avg:total_onshift_dashers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_outstanding_orders]' derivation='Avg' name='[avg:total_outstanding_orders:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_onshift_dashers]' derivation='CountD' name='[ctd:total_onshift_dashers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_outstanding_orders]' derivation='Median' name='[med:total_outstanding_orders:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_579838513609449473]' derivation='None' name='[none:Calculation_579838513609449473:nk]' pivot='key' type='nominal' />
+      <column-instance column='[num_distinct_items]' derivation='Sum' name='[sum:num_distinct_items:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_busy_dashers]' derivation='Sum' name='[sum:total_busy_dashers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_onshift_dashers]' derivation='Sum' name='[sum:total_onshift_dashers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_outstanding_orders]' derivation='Sum' name='[sum:total_outstanding_orders:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_busy_dashers:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:total_busy_dashers:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:num_distinct_items:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_outstanding_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[med:total_outstanding_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:total_outstanding_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_onshift_dashers:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[ctd:total_onshift_dashers:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:total_onshift_dashers:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[avg:total_busy_dashers:ok]' type='shape'>
+            <map to='asterisk'>
+              <bucket>41.939531702607013</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>1055917.0</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>799302.0</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>45.058133489309157</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>1386619.0</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>35.722994413407818</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>36.984609813507149</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>939028.0</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>39.686741895946916</bucket>
+            </map>
+            <map to='square'>
+              <bucket>817064.0</bucket>
+            </map>
+            <map to='times'>
+              <bucket>41.076674706294249</bucket>
+            </map>
+            <map to='times'>
+              <bucket>1042449.0</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>47.992050974701911</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>1521444.0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_579838513609449473:nk]' palette='red_10_0' type='palette'>
+            <map to='#91b3d7'>
+              <bucket>&quot;Morning&quot;</bucket>
+            </map>
+            <map to='#a0d4ee'>
+              <bucket>&quot;Afternoon&quot;</bucket>
+            </map>
+            <map to='#c8133b'>
+              <bucket>&quot;Early Morning&quot;</bucket>
+            </map>
+            <map to='#ea8783'>
+              <bucket>&quot;Evening&quot;</bucket>
+            </map>
+            <map to='#ed444a'>
+              <bucket>&quot; Late Night&quot;</bucket>
+            </map>
+            <map to='#feb5a2'>
+              <bucket>&quot;Night&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='doordash_historical_data_cleaned.csv' id='doordash_historical_data_cleaned.csv_26987360C7DF4CAABDD1608143725072'>
+            <properties context=''>
+              <relation connection='textscan.10gjuvn1fhb3l21d6ien91260xso' name='doordash_historical_data_cleaned.csv' table='[doordash_historical_data_cleaned#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='market_id' ordinal='0' />
+                  <column datatype='datetime' name='created_at' ordinal='1' />
+                  <column datatype='datetime' name='actual_delivery_time' ordinal='2' />
+                  <column datatype='integer' name='store_id' ordinal='3' />
+                  <column datatype='string' name='store_primary_category' ordinal='4' />
+                  <column datatype='integer' name='order_protocol' ordinal='5' />
+                  <column datatype='integer' name='total_items' ordinal='6' />
+                  <column datatype='real' name='subtotal' ordinal='7' />
+                  <column datatype='integer' name='num_distinct_items' ordinal='8' />
+                  <column datatype='real' name='min_item_price' ordinal='9' />
+                  <column datatype='real' name='max_item_price' ordinal='10' />
+                  <column datatype='integer' name='total_onshift_dashers' ordinal='11' />
+                  <column datatype='integer' name='total_busy_dashers' ordinal='12' />
+                  <column datatype='integer' name='total_outstanding_orders' ordinal='13' />
+                  <column datatype='integer' name='estimated_order_place_duration' ordinal='14' />
+                  <column datatype='integer' name='estimated_store_to_consumer_driving_duration' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Busy Dashers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Average Busy Drivers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column-instance column='[total_busy_dashers]' derivation='Avg' name='[avg:total_busy_dashers:qk]' pivot='key' type='quantitative' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[created_at]' derivation='MDY' name='[md:created_at:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Busy Dashers' datatype='integer' name='[total_busy_dashers]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='22' />
+            <format attr='text-align' value='center' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_busy_dashers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{685A645B-9419-4547-85F4-6448043C7A7D}' />
+    </worksheet>
+    <worksheet name='Num of orders by period of day'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Number of Orders By Period of Day</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column aggregation='Sum' caption='Hour Created' datatype='integer' name='[Calculation_579838513608679424]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;, [created_at])' />
+            </column>
+            <column caption='Period of Day' datatype='string' datatype-customized='true' name='[Calculation_579838513609449473]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_579838513608679424] &gt;= 3 AND [Calculation_579838513608679424] &lt; 6 THEN &apos;Early Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 6 AND [Calculation_579838513608679424] &lt; 12 THEN &apos;Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 12 AND [Calculation_579838513608679424] &lt; 17 THEN &apos;Afternoon&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 17 AND [Calculation_579838513608679424] &lt; 21 THEN &apos;Evening&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 21 AND [Calculation_579838513608679424] &lt;= 24 THEN &apos;Night&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 0 AND [Calculation_579838513608679424] &lt; 3 THEN &apos; Late Night&apos;&#13;&#10;END' />
+              <aliases>
+                <alias key='&quot; Late Night&quot;' value=' Late Night (12am - 3am)' />
+                <alias key='&quot;Afternoon&quot;' value='Afternoon (12pm - 5pm)' />
+                <alias key='&quot;Early Morning&quot;' value='Early Morning (3am - 6am)' />
+                <alias key='&quot;Evening&quot;' value='Evening (5pm- 9pm)' />
+                <alias key='&quot;Morning&quot;' value='Morning (6am - 12pm)' />
+                <alias key='&quot;Night&quot;' value='Night (9pm - 12am)' />
+              </aliases>
+            </column>
+            <column-instance column='[created_at]' derivation='Count' name='[cnt:created_at:qk]' pivot='key' type='quantitative' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_579838513609449473]' derivation='None' name='[none:Calculation_579838513609449473:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' value='Tableau Light' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]' num-steps='6' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dada</color>
+                <color>#f3c3c3</color>
+                <color>#f5abab</color>
+                <color>#f69393</color>
+                <color>#f87c7c</color>
+                <color>#f96363</color>
+                <color>#fa4b4b</color>
+                <color>#fc3232</color>
+                <color>#fd1919</color>
+                <color>#ff0000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]</rows>
+        <cols>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</cols>
+      </table>
+      <simple-id uuid='{1DF9D67C-0922-4A7E-AB5A-43ABC99D2555}' />
+    </worksheet>
+    <worksheet name='Onshift Dashers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Average Onshift Dashers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column-instance column='[total_onshift_dashers]' derivation='Avg' name='[avg:total_onshift_dashers:qk]' pivot='key' type='quantitative' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[created_at]' derivation='MDY' name='[md:created_at:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Onshift Dashers' datatype='integer' name='[total_onshift_dashers]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='24' />
+            <format attr='text-align' value='center' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='border-color' value='#ff0000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='border-color' value='#ff0000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_onshift_dashers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{A0DABB25-A416-426E-A81A-B1E3095F0BA5}' />
+    </worksheet>
+    <worksheet name='Onshift dashers by period of day'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Average Onshift Dashers by Period of Day</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column aggregation='Sum' caption='Hour Created' datatype='integer' name='[Calculation_579838513608679424]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;, [created_at])' />
+            </column>
+            <column caption='Period of Day' datatype='string' datatype-customized='true' name='[Calculation_579838513609449473]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_579838513608679424] &gt;= 3 AND [Calculation_579838513608679424] &lt; 6 THEN &apos;Early Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 6 AND [Calculation_579838513608679424] &lt; 12 THEN &apos;Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 12 AND [Calculation_579838513608679424] &lt; 17 THEN &apos;Afternoon&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 17 AND [Calculation_579838513608679424] &lt; 21 THEN &apos;Evening&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 21 AND [Calculation_579838513608679424] &lt;= 24 THEN &apos;Night&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 0 AND [Calculation_579838513608679424] &lt; 3 THEN &apos; Late Night&apos;&#13;&#10;END' />
+              <aliases>
+                <alias key='&quot; Late Night&quot;' value=' Late Night (12am - 3am)' />
+                <alias key='&quot;Afternoon&quot;' value='Afternoon (12pm - 5pm)' />
+                <alias key='&quot;Early Morning&quot;' value='Early Morning (3am - 6am)' />
+                <alias key='&quot;Evening&quot;' value='Evening (5pm- 9pm)' />
+                <alias key='&quot;Morning&quot;' value='Morning (6am - 12pm)' />
+                <alias key='&quot;Night&quot;' value='Night (9pm - 12am)' />
+              </aliases>
+            </column>
+            <column-instance column='[total_onshift_dashers]' derivation='Avg' name='[avg:total_onshift_dashers:qk]' pivot='key' type='quantitative' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_579838513609449473]' derivation='None' name='[none:Calculation_579838513609449473:nk]' pivot='key' type='nominal' />
+            <column caption='Total Onshift Dashers' datatype='integer' name='[total_onshift_dashers]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_onshift_dashers:qk]' />
+              <text column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]' />
+              <color column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#666666'>Period of Day</run>
+                <run fontcolor='#898989'>:&#9;</run>
+                <run bold='true' fontcolor='#000000'><![CDATA[<[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#666666'>Avg. Total Onshift Dashers:</run>
+                <run fontcolor='#000000'>Æ&#9;</run>
+                <run bold='true' fontcolor='#000000'><![CDATA[<[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_onshift_dashers:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#000000' />
+                <format attr='font-size' value='11' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1B3FC27C-6689-43D0-A562-776C71BE60C1}' />
+    </worksheet>
+    <worksheet name='Outstanding Orders'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Average Outstanding Orders</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column-instance column='[total_outstanding_orders]' derivation='Avg' name='[avg:total_outstanding_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[created_at]' derivation='MDY' name='[md:created_at:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Outstanding Orders' datatype='integer' name='[total_outstanding_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='24' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='border-color' value='#ff0000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' value='2' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[avg:total_outstanding_orders:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{02D0FD8E-44E4-4C35-A887-5AC4407B437E}' />
+    </worksheet>
+    <worksheet name='Subtotal by Food Category'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Subtotal by Category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column-instance column='[store_primary_category]' derivation='None' name='[none:store_primary_category:nk]' pivot='key' type='nominal' />
+            <column caption='Store Primary Category' datatype='string' name='[store_primary_category]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;american&quot;' value='American' />
+                <alias key='&quot;burger&quot;' value='Burger' />
+                <alias key='&quot;chinese&quot;' value='Chinese' />
+                <alias key='&quot;dessert&quot;' value='Dessert' />
+                <alias key='&quot;fast&quot;' value='Fast' />
+                <alias key='&quot;indian&quot;' value='Indian' />
+                <alias key='&quot;japanese&quot;' value='Japanese' />
+                <alias key='&quot;mexican&quot;' value='Mexican' />
+                <alias key='&quot;pizza&quot;' value='Pizza' />
+                <alias key='&quot;sandwich&quot;' value='Sandwich' />
+              </aliases>
+            </column>
+            <column caption='Subtotal' datatype='real' name='[subtotal]' role='measure' type='quantitative' />
+            <column-instance column='[subtotal]' derivation='Sum' name='[sum:subtotal:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]'>
+            <groupfilter function='level-members' level='[none:store_primary_category:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='text-format' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]' value='C1033%' />
+            <format attr='font-size' value='24' />
+            <format attr='font-family' value='Tableau Book' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{95E4CBBE-79FE-4EDF-8880-2E514CC1C025}' />
+    </worksheet>
+    <worksheet name='Subtotal by period of day'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Subtotals by Period of Day</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column aggregation='Sum' caption='Hour Created' datatype='integer' name='[Calculation_579838513608679424]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;, [created_at])' />
+            </column>
+            <column caption='Period of Day' datatype='string' datatype-customized='true' name='[Calculation_579838513609449473]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_579838513608679424] &gt;= 3 AND [Calculation_579838513608679424] &lt; 6 THEN &apos;Early Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 6 AND [Calculation_579838513608679424] &lt; 12 THEN &apos;Morning&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 12 AND [Calculation_579838513608679424] &lt; 17 THEN &apos;Afternoon&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 17 AND [Calculation_579838513608679424] &lt; 21 THEN &apos;Evening&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 21 AND [Calculation_579838513608679424] &lt;= 24 THEN &apos;Night&apos;&#13;&#10;ELSEIF [Calculation_579838513608679424] &gt;= 0 AND [Calculation_579838513608679424] &lt; 3 THEN &apos; Late Night&apos;&#13;&#10;END' />
+              <aliases>
+                <alias key='&quot; Late Night&quot;' value=' Late Night (12am - 3am)' />
+                <alias key='&quot;Afternoon&quot;' value='Afternoon (12pm - 5pm)' />
+                <alias key='&quot;Early Morning&quot;' value='Early Morning (3am - 6am)' />
+                <alias key='&quot;Evening&quot;' value='Evening (5pm- 9pm)' />
+                <alias key='&quot;Morning&quot;' value='Morning (6am - 12pm)' />
+                <alias key='&quot;Night&quot;' value='Night (9pm - 12am)' />
+              </aliases>
+            </column>
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_579838513609449473]' derivation='None' name='[none:Calculation_579838513609449473:nk]' pivot='key' type='nominal' />
+            <column caption='Subtotal' datatype='real' name='[subtotal]' role='measure' type='quantitative' />
+            <column-instance column='[subtotal]' derivation='Sum' name='[sum:subtotal:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Early Morning&quot;</bucket>
+              <bucket>&quot;Morning&quot;</bucket>
+              <bucket>&quot;Afternoon&quot;</bucket>
+              <bucket>&quot;Evening&quot;</bucket>
+              <bucket>&quot;Night&quot;</bucket>
+              <bucket>&quot; Late Night&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]' field-type='quantitative' major-origin='0.0' major-spacing='200000.0' max='2600000.0' min='0.0' minor-origin='0.0' minor-spacing='200000.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]' scope='rows' value='Subtotal' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]' value='C1033%' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.0386741161346436' />
+                <format attr='shape' value='Company Logos/Doordash.png' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.070e5nm05hpul21gps2dp0hzqrbx].[sum:subtotal:qk]</rows>
+        <cols>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</cols>
+      </table>
+      <simple-id uuid='{A6EFC75B-C363-48C0-90F3-5E6DF9E1B81A}' />
+    </worksheet>
+    <worksheet name='Top 10 Categories by Order Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Top 10 Categories</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+            <column caption='Order Count Rank' datatype='integer' name='[Calculation_568298041289408517]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK(COUNTD([created_at]), &apos;desc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column-instance column='[created_at]' derivation='CountD' name='[ctd:created_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[store_primary_category]' derivation='None' name='[none:store_primary_category:nk]' pivot='key' type='nominal' />
+            <column caption='Store Primary Category' datatype='string' name='[store_primary_category]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;american&quot;' value='American' />
+                <alias key='&quot;burger&quot;' value='Burger' />
+                <alias key='&quot;chinese&quot;' value='Chinese' />
+                <alias key='&quot;dessert&quot;' value='Dessert' />
+                <alias key='&quot;fast&quot;' value='Fast' />
+                <alias key='&quot;indian&quot;' value='Indian' />
+                <alias key='&quot;japanese&quot;' value='Japanese' />
+                <alias key='&quot;mexican&quot;' value='Mexican' />
+                <alias key='&quot;pizza&quot;' value='Pizza' />
+                <alias key='&quot;sandwich&quot;' value='Sandwich' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_568298041289408517]' derivation='User' name='[usr:Calculation_568298041289408517:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.070e5nm05hpul21gps2dp0hzqrbx].[usr:Calculation_568298041289408517:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>10</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.070e5nm05hpul21gps2dp0hzqrbx].[ctd:created_at:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.070e5nm05hpul21gps2dp0hzqrbx].[usr:Calculation_568298041289408517:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='title' class='0' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[ctd:created_at:qk]' scope='rows' value='Order Count' />
+            <encoding attr='space' class='0' field='[federated.070e5nm05hpul21gps2dp0hzqrbx].[ctd:created_at:qk]' field-type='quantitative' max='22000' min='0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.0386741161346436' />
+                <format attr='shape' value='Company Logos/Doordash.png' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.070e5nm05hpul21gps2dp0hzqrbx].[ctd:created_at:qk]</rows>
+        <cols>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]</cols>
+      </table>
+      <simple-id uuid='{5F3832D1-2BC0-4238-97B3-A4AAE7E630A7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Doordash Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Doordash Performance </run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='10'>Jan. 21st 2015 - Feb. 18th 2015</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='border-color' value='#ff0000' />
+          <format attr='border-width' value='0' />
+          <format attr='border-style' value='none' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98260' id='23' param='horz' type-v2='layout-flow' w='99062' x='469' y='870'>
+            <zone h='98260' id='14' param='horz' type-v2='layout-flow' w='99062' x='469' y='870'>
+              <zone h='98260' id='7' param='vert' type-v2='layout-flow' w='99062' x='469' y='870'>
+                <zone h='4668' id='9' type-v2='title' w='99062' x='469' y='870'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5f5f55b' />
+          </zone-style>
+        </zone>
+        <zone h='46756' id='10' param='vert' type-v2='layout-flow' w='48404' x='894' y='6329'>
+          <zone h='46440' id='12' name='Num of orders by period of day' w='48234' x='979' y='6487'>
+            <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ea0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='43513' id='16' param='vert' type-v2='layout-flow' w='48404' x='937' y='54589'>
+          <zone h='43197' id='17' name='Subtotal by period of day' w='48234' x='1022' y='54747'>
+            <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='46677' id='20' param='vert' type-v2='layout-flow' w='48489' x='50234' y='6329'>
+          <zone h='46361' id='21' name='Onshift dashers by period of day' w='48319' x='50319' y='6487'>
+            <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ea0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='44146' id='26' is-centered='0' is-scaled='1' param='C:/Users/Maxim/Pictures/doordash-powerhaus-pacific-beach.png' type-v2='bitmap' w='32950' x='59642' y='54035' />
+        <zone h='5142' id='27' is-centered='0' is-scaled='1' param='C:/Users/Maxim/Pictures/DoorDash-logo.png' type-v2='bitmap' w='34653' x='894' y='949' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Doordash Performance </run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='10'>Jan. 21st 2015 - Feb. 18th 2015</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98734' id='34' param='vert' type-v2='layout-flow' w='99318' x='341' y='633'>
+                <zone h='4668' id='9' type-v2='title' w='99062' x='469' y='870'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='41' h='5142' id='27' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Maxim/Pictures/DoorDash-logo.png' type-v2='bitmap' w='34653' x='894' y='949'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46440' id='12' is-fixed='true' name='Num of orders by period of day' w='48234' x='979' y='6487'>
+                  <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46361' id='21' is-fixed='true' name='Onshift dashers by period of day' w='48319' x='50319' y='6487'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44146' id='26' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Maxim/Pictures/doordash-powerhaus-pacific-beach.png' type-v2='bitmap' w='32950' x='59642' y='54035'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43197' id='17' is-fixed='true' name='Subtotal by period of day' w='48234' x='1022' y='54747'>
+                  <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#ff0000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='3' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5f5f55b' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8D19D376-5C27-4767-A177-BBC04FF8F0BA}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Doordash Dashboard 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Doordash Performance </run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='10'>Jan. 21st 2015 - Feb. 18th 2015</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='border-color' value='#ff0000' />
+          <format attr='border-width' value='0' />
+          <format attr='border-style' value='none' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='doordash_historical_data_cleaned' name='federated.070e5nm05hpul21gps2dp0hzqrbx' />
+      </datasources>
+      <datasource-dependencies datasource='federated.070e5nm05hpul21gps2dp0hzqrbx'>
+        <column-instance column='[store_primary_category]' derivation='None' name='[none:store_primary_category:nk]' pivot='key' type='nominal' />
+        <column caption='Store Primary Category' datatype='string' name='[store_primary_category]' role='dimension' type='nominal'>
+          <aliases>
+            <alias key='&quot;american&quot;' value='American' />
+            <alias key='&quot;burger&quot;' value='Burger' />
+            <alias key='&quot;chinese&quot;' value='Chinese' />
+            <alias key='&quot;dessert&quot;' value='Dessert' />
+            <alias key='&quot;fast&quot;' value='Fast' />
+            <alias key='&quot;indian&quot;' value='Indian' />
+            <alias key='&quot;japanese&quot;' value='Japanese' />
+            <alias key='&quot;mexican&quot;' value='Mexican' />
+            <alias key='&quot;pizza&quot;' value='Pizza' />
+            <alias key='&quot;sandwich&quot;' value='Sandwich' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98260' id='32' param='horz' type-v2='layout-flow' w='99062' x='469' y='870'>
+            <zone h='98260' id='23' param='horz' type-v2='layout-flow' w='92251' x='469' y='870'>
+              <zone h='98260' id='14' param='horz' type-v2='layout-flow' w='92251' x='469' y='870'>
+                <zone h='98260' id='7' param='vert' type-v2='layout-flow' w='92251' x='469' y='870'>
+                  <zone h='4668' id='9' type-v2='title' w='92251' x='469' y='870'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98260' id='31' is-fixed='true' param='vert' type-v2='layout-flow' w='6811' x='92720' y='870'>
+              <zone h='4114' id='33' mode='checkdropdown' name='Subtotal by Food Category' param='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]' show-apply='true' type-v2='filter' w='6811' x='92720' y='870'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone count='2' h='8703' id='35' name='Outstanding Orders' name1='Busy Dashers' name2='Onshift Dashers' synchronized='1' type-v2='currpage' w='6811' x='92720' y='4984'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5f5f55b' />
+          </zone-style>
+        </zone>
+        <zone h='45965' id='10' param='vert' type-v2='layout-flow' w='48404' x='894' y='6329'>
+          <zone fixed-size='291' h='23655' id='30' is-fixed='true' name='Subtotal by Food Category' w='48234' x='979' y='6487'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='243' h='19858' id='34' is-fixed='true' name='Outstanding Orders' w='48234' x='979' y='30142'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ea0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='43513' id='16' param='vert' type-v2='layout-flow' w='48404' x='937' y='54589'>
+          <zone h='43197' id='40' name='Top 10 Categories by Order Count' w='48234' x='1022' y='54747'>
+            <layout-cache minheight='164' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ff0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='45965' id='20' param='vert' type-v2='layout-flow' w='42231' x='50234' y='6329'>
+          <zone fixed-size='290' h='23576' id='36' is-fixed='true' name='Busy Dashers' w='42061' x='50319' y='6487'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='244' h='19937' id='37' is-fixed='true' name='Onshift Dashers' w='42061' x='50319' y='30063'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#ea0000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='44146' id='26' is-centered='0' is-scaled='1' param='C:/Users/Maxim/Pictures/doordash-powerhaus-pacific-beach.png' type-v2='bitmap' w='32950' x='59642' y='54035' />
+        <zone h='5142' id='27' is-centered='0' is-scaled='1' param='C:/Users/Maxim/Pictures/DoorDash-logo.png' type-v2='bitmap' w='34653' x='894' y='949' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium'>Doordash Performance </run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='10'>Jan. 21st 2015 - Feb. 18th 2015</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='44' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98734' id='43' param='vert' type-v2='layout-flow' w='99318' x='341' y='633'>
+                <zone h='4668' id='9' type-v2='title' w='92251' x='469' y='870'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='41' h='5142' id='27' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Maxim/Pictures/DoorDash-logo.png' type-v2='bitmap' w='34653' x='894' y='949'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4114' id='33' mode='checkdropdown' name='Subtotal by Food Category' param='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]' show-apply='true' type-v2='filter' w='6811' x='92720' y='870'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='181' h='23655' id='30' is-fixed='true' name='Subtotal by Food Category' w='48234' x='979' y='6487'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='181' h='23576' id='36' is-fixed='true' name='Busy Dashers' w='42061' x='50319' y='6487'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='151' h='19937' id='37' is-fixed='true' name='Onshift Dashers' w='42061' x='50319' y='30063'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='151' h='19858' id='34' is-fixed='true' name='Outstanding Orders' w='48234' x='979' y='30142'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44146' id='26' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Maxim/Pictures/doordash-powerhaus-pacific-beach.png' type-v2='bitmap' w='32950' x='59642' y='54035'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43197' id='40' is-fixed='true' name='Top 10 Categories by Order Count' w='48234' x='1022' y='54747'>
+                  <layout-cache minheight='164' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone count='2' h='8703' id='35' name='Outstanding Orders' name1='Busy Dashers' name2='Onshift Dashers' synchronized='1' type-v2='currpage' w='6811' x='92720' y='4984'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#ff0000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='3' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5f5f55b' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{25B4572E-0B13-4411-A7A5-45D94033286F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Num of orders by period of day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]' show-title='false' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='horizontal'>
+              <node-reference>
+                <fields>
+                  <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</field>
+                </fields>
+                <multibucket>
+                  <bucket>&quot; Late Night&quot;</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[cnt:created_at:qk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513608679424:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[wd:created_at:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[wd:created_at:qk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:created_at:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C17CBD63-5911-4D6E-A8EA-43B561A034B1}' />
+    </window>
+    <window class='worksheet' name='Top 10 Categories by Order Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[dy:created_at:qk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:Calculation_579838513609449473:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:created_at:ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{F36F3087-D0E2-4566-B6F5-1C900BB6AF3F}' />
+    </window>
+    <window class='worksheet' name='Subtotal by period of day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[dy:created_at:qk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:Calculation_579838513609449473:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:created_at:ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{97225F9C-C810-4B06-B4E6-6CF7629D87D6}' />
+    </window>
+    <window class='worksheet' name='Onshift dashers by period of day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513609449473:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{60401FE5-ADE8-4702-8963-115CE40D72C7}' />
+    </window>
+    <window class='worksheet' name='Subtotal by Food Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]' show-apply='true' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:store_primary_category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4180ACC6-8F48-4C61-AB05-A33D6C74762D}' />
+    </window>
+    <window class='worksheet' name='Busy Dashers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[yr:created_at:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{55FB15DE-D67F-40F4-BD1F-BF4C41F634D0}' />
+    </window>
+    <window class='worksheet' name='Onshift Dashers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>20150208</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513608679424:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F86B4A68-E8FC-47DF-89AF-5BF7BBCFCA7A}' />
+    </window>
+    <window class='worksheet' name='Outstanding Orders'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>20150122</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[hr:created_at:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[md:created_at:ok]</field>
+            <field>[federated.070e5nm05hpul21gps2dp0hzqrbx].[none:Calculation_579838513608679424:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{73AD70B7-3C4E-4E21-8B9D-499FB8DC02D3}' />
+    </window>
+    <window class='dashboard' name='Doordash Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Num of orders by period of day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Onshift dashers by period of day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Subtotal by period of day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{C91B33CA-2CC4-4D6A-A898-DF4140D17E20}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Doordash Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Busy Dashers'>
+          <current-page>
+            <multibucket>
+              <bucket>20150121</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Onshift Dashers'>
+          <current-page>
+            <multibucket>
+              <bucket>20150121</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Outstanding Orders'>
+          <current-page>
+            <multibucket>
+              <bucket>20150121</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Subtotal by Food Category'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Categories by Order Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{DA069CB2-84DB-4525-8BE9-6BE99C9B8E18}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Busy Dashers' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACMUlEQVR4nO3TsRXCMBQEwQ/P/agF1+iGRQYdoGBnogsv2dfeew9EXTMzowGiru96npm1
+      Dl6B//sFsNbMfZ97Age8Tx+AkwRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp
+      AiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA
+      0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpHxj8CeDPgQi0AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Doordash Dashboard 1' width='192'>
+      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
+      aoEaBgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Doordash Dashboard 2' width='192'>
+      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
+      0CQAYWj/H/PJB2EAPst1AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Num of orders by period of day' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Onshift Dashers' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACMUlEQVR4nO3TsRXCMBQEwQ/P/agF1+iGRQYdoGBnogsv2dfeew9EXTMzowGiru96npm1
+      Dl6B//sFsNbMfZ97Age8Tx+AkwRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp
+      AiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA
+      0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpHxj8CeDPgQi0AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Onshift dashers by period of day' width='192'>
+      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
+      +C8AX9oACKS49gAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Outstanding Orders' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACMUlEQVR4nO3TsRXCMBQEwQ/P/agF1+iGRQYdoGBnogsv2dfeew9EXTMzowGiru96npm1
+      Dl6B//sFsNbMfZ97Age8Tx+AkwRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp
+      AiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA
+      0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpHxj8CeDPgQi0AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Subtotal by Food Category' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACMUlEQVR4nO3TsRXCMBQEwQ/P/agF1+iGRQYdoGBnogsv2dfeew9EXTMzowGiru96npm1
+      Dl6B//sFsNbMfZ97Age8Tx+AkwRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp
+      AiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA
+      0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpHxj8CeDPgQi0AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Subtotal by period of day' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Top 10 Categories by Order Count' width='192'>
+      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
+      SUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+  <external>
+    <shapes>
+      <shape name='Company Logos/Doordash.png'>
+        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
+      </shape>
+    </shapes>
+  </external>
+</workbook>
